@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Block : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        InvokeRepeating("DroppingDown", 3f, 1f);
+    }
+
+    void DroppingDown()
+    {
+        this.transform.Translate(0,-1,0);
+    }
+
+}
