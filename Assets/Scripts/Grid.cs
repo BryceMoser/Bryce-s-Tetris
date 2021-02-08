@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class Grid : MonoBehaviour
 {
+    [SerializeField] public GameObject [,] grid = new GameObject[10,20];
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -15,7 +16,4 @@ public class Block : MonoBehaviour
     {
         
     }
-
-    
-
 }
