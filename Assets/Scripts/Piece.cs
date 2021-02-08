@@ -15,16 +15,30 @@ public class Piece : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            this.transform.Translate(-1, 0, 0);
+            //Movement relative to the world
+            this.transform.position += new Vector3(-1, 0, 0);
         }
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            this.transform.Translate(1, 0, 0);
+            //Movement relative to the world
+            this.transform.position += new Vector3(1, 0, 0);
+        }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            //Movement relative to the piece
+            this.transform.Rotate(0, 90, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //Movement relative to the piece
+            this.transform.Rotate(0, -90, 0);
         }
     }
 
     void DroppingDown()
     {
-        this.transform.Translate(0, 0, -1);
+        //Movement relative to the world
+        this.transform.position += new Vector3(0, 0, -1);
     }
 }
