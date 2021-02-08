@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7789963442310886684}
   - component: {fileID: 2195645293408611700}
+  - component: {fileID: -7874681958437420393}
   m_Layer: 0
   m_Name: S-Block
   m_TagString: Untagged
@@ -47,6 +48,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cafa62dba250c646bbaf362eb2fe44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-7874681958437420393
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854065328127488264}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &2847748775402732392
 PrefabInstance:
   m_ObjectHideFlags: 0
