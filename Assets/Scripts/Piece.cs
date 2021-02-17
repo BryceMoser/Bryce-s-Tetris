@@ -34,11 +34,21 @@ public class Piece : MonoBehaviour
             //Movement relative to the piece
             this.transform.Rotate(0, -90, 0);
         }
+
     }
 
     void DroppingDown()
     {
         //Movement relative to the world
         this.transform.position += new Vector3(0, 0, -1);
+    }
+
+    //Destroy this piece if colliding with either the floor or another piece
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Piece"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
