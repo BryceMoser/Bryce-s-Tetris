@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[,] blockBoard = new GameObject[10, 20];
+    private static GameManager _instance;
+    public static GameManager Instance;
+
     [SerializeField] GameObject gameBoard;
+    public GameObject[,] blockBoard = new GameObject[10, 20];
 
     // Start is called before the first frame update
     void Start()
     {
-        //Creating matrix of game objects
+        //Populating matrix of game objects
         for(int i =0; i < 10; i++)
         {
             for(int j = 0; j < 20; j++)
             {
-                blockBoard[i, j] = GameObject.Find("Game Board/Row " + i + "/Block " + (j + 1));
+                blockBoard[i, j] = GameObject.Find("Game Board/Row " + j + "/Block " + (i+1));
             }
         }
-
 
     }
 
@@ -27,4 +29,10 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
 }

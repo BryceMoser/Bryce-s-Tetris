@@ -13,6 +13,7 @@ public class Piece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Player moving piece position
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             //Movement relative to the world
@@ -24,7 +25,15 @@ public class Piece : MonoBehaviour
             this.transform.position += new Vector3(1, 0, 0);
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            //Movement relative to the world
+            this.transform.position += new Vector3(0, 0, -1);
+        }
+
+
+        //Player rotating piece
+        if (Input.GetKeyDown(KeyCode.R))
         {
             //Movement relative to the piece
             this.transform.Rotate(0, 90, 0);
@@ -48,7 +57,7 @@ public class Piece : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Piece"))
         {
-            Destroy(this.gameObject);
+           Destroy(this.gameObject);
         }
     }
 }
